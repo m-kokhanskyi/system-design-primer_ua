@@ -1,39 +1,39 @@
 *[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [Arabic](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [Bengali](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Brazilian Portuguese](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [German](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [Greek](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [Italian](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [Korean](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [Persian](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polish](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [Russian](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Spanish](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [Thai](https://github.com/donnemartin/system-design-primer/issues/187) ∙ [Turkish](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [Vietnamese](https://github.com/donnemartin/system-design-primer/issues/127) ∙ [Українська](README-uk.md)  | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
 
-# The System Design Primer
+# Вступ до проектування програмних систем
 
 <p align="center">
   <img src="http://i.imgur.com/jj3A5N8.png">
   <br/>
 </p>
 
-## Motivation
+## Мета курсу
 
-> Learn how to design large-scale systems.
+> Навчитися проектувати масштабовані системи.
 >
-> Prep for the system design interview.
+> Підготуватися до співбесід із проектування програмних систем.
 
-### Learn how to design large-scale systems
+### Проектування масштабованих систем
 
-Learning how to design scalable systems will help you become a better engineer.
+Вивчення проектування масштабованих систем допоможе Вам стати кращим програмним інженером.
 
-System design is a broad topic.  There is a **vast amount of resources scattered throughout the web** on system design principles.
+Проектування програмних систем - це дуже широка галузь знань. В інтернеті існує **величезна кількість ресурсів** по основах проектування.
 
-This repo is an **organized collection** of resources to help you learn how to build systems at scale.
+Цей репозиторій є систематизованим набором ресурсів, що допоможуть Вам навчитися конструювати масштабовані системи.
 
-### Learn from the open source community
+### Вчіться зі спільнотою відкритого коду
 
-This is a continually updated, open source project.
+Проект є відкритим і постійно оновлюється.
 
-[Contributions](#contributing) are welcome!
+[Допомога](#contributing) завжди вітається!
 
-### Prep for the system design interview
+### Підготовка до співбесід з проектування програмних систем
 
-In addition to coding interviews, system design is a **required component** of the **technical interview process** at many tech companies.
+Крім написання програмного коду, проектування систем є **невід'ємною частиною циклу технічних співбесід** в більшості технічних компаній.
 
-**Practice common system design interview questions** and **compare** your results with **sample solutions**: discussions, code, and diagrams.
+**Практикуйтеся на типових задачах по проектуванню, які запитують на співбесідах** та **порівнюйте** Ваші рішення із **запропонованими**: обговореннями, кодом та діаграмами.
 
-Additional topics for interview prep:
+Додаткові розділи для підготовки до співбесід:
 
 * [Study guide](#study-guide)
 * [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
