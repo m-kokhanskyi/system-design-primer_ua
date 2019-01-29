@@ -84,11 +84,11 @@ Content that needs some polishing is placed [under development](#under-developme
 
 Review the [Contributing Guidelines](CONTRIBUTING.md).
 
-## Index of system design topics
+## Перелік тем з системного дизайну
 
-> Summaries of various system design topics, including pros and cons.  **Everything is a trade-off**.
+> Узагальнення з різноманітних тем системного дизайну включаючи їх переваги та недоліки.   **Будь-яке рішення є компромісом**.
 >
-> Each section contains links to more in-depth resources.
+> Кожна секція містить посилання на ресурси для поглибленого вивчення.
 
 <p align="center">
   <img src="http://i.imgur.com/jrUBAF7.png">
@@ -176,105 +176,105 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 * [Contact info](#contact-info)
 * [License](#license)
 
-## Study guide
+## Навчальний план
 
-> Suggested topics to review based on your interview timeline (short, medium, long).
+> Запропоновані теми для ознайомлення базуються на вашому графіку співбесід (короткому, середньому, довгому).
 
 ![Imgur](http://i.imgur.com/OfVllex.png)
 
-**Q: For interviews, do I need to know everything here?**
+**Питання: Чи повинен я знати все описане тут для співбесіди?**
 
-**A: No, you don't need to know everything here to prepare for the interview**.
+**Відповідь: Ні, не повинен**.
 
-What you are asked in an interview depends on variables such as:
+Питання на вашій співбесіді залежатимуть від:
 
-* How much experience you have
-* What your technical background is
-* What positions you are interviewing for
-* Which companies you are interviewing with
-* Luck
+* Вашого досвіду
+* Вашої технічної кваліфікації
+* Позиції, на яку ви співбесідуєтесь
+* Компанії, в якій ви співбесідуєтесь 
+* Вашої вдачі
 
-More experienced candidates are generally expected to know more about system design.  Architects or team leads might be expected to know more than individual contributors.  Top tech companies are likely to have one or more design interview rounds.
+Зазвичай очікується, що кандидати з більшим досвідом знають більше про системне проектування.  Архітектори або лідери команд мали б знати більше ніж окремі виконавці.  Ймовірно саме тому найкращі технологічні компанії мають один або кілька раундів співбесід по проектуванню систем.
 
-Start broad and go deeper in a few areas.  It helps to know a little about various key system design topics.  Adjust the following guide based on your timeline, experience, what positions you are interviewing for, and which companies you are interviewing with.
+Одразу розпочинайте з кількох тем.  Це допоможе вам дізнатись трішки про різноманітні ключові теми системного проектування.  Коректуйте цей посібник залежно від вашого часу, досвіду, позиції, на яку ви співбесідуєтесь, і компанії, в яку ви співбесідуєтесь.
 
-* **Short timeline** - Aim for **breadth** with system design topics.  Practice by solving **some** interview questions.
-* **Medium timeline** - Aim for **breadth** and **some depth** with system design topics.  Practice by solving **many** interview questions.
-* **Long timeline** - Aim for **breadth** and **more depth** with system design topics.  Practice by solving **most** interview questions.
+* **При короткому відрізку часу** - Вашою ціллю є осягнути **вширину** теми системного проектування.  Практикуйтеся, розв'язуючи **деякі** питання зі співбесід.
+* **При середньому відрізку часу** - Вашою ціллю є осягнути **вширину** і **трішки вглибину** теми системного проектування.  Практикуйтеся, розв'язуючи **багато** питань зі співбесід.
+* **При довгому відрізку часу** - Вашою ціллю є осягнути **вширину** і **більше вглибину** теми системного проектування.  Практикуйтеся, розв'язуючи **більшість** питань зі співбесід.
 
-| | Short | Medium | Long |
+| | Короткий | Середній | Довгий |
 |---|---|---|---|
-| Read through the [System design topics](#index-of-system-design-topics) to get a broad understanding of how systems work | :+1: | :+1: | :+1: |
-| Read through a few articles in the [Company engineering blogs](#company-engineering-blogs) for the companies you are interviewing with | :+1: | :+1: | :+1: |
-| Read through a few [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
-| Review [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
-| Work through [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Some | Many | Most |
-| Work through [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Some | Many | Most |
-| Review [Additional system design interview questions](#additional-system-design-interview-questions) | Some | Many | Most |
+| Прочитайте [System design topics](#index-of-system-design-topics), щоб отримати широке розуміння того, як працюють системи | :+1: | :+1: | :+1: |
+| Прочитайте кілька статей в [Company engineering blogs](#company-engineering-blogs) компаній, де ви проходите співбесіду | :+1: | :+1: | :+1: |
+| Прочитайте кілька [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
+| Перегляньте [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
+| Опрацюйте [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Кілька | Багато | Майже всі |
+| Опрацюйте [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Кілька | Багато | Майже всі |
+| Перегляньте [Additional system design interview questions](#additional-system-design-interview-questions) | Кілька | Багато | Майже всі |
 
-## How to approach a system design interview question
+## Як підходити до питань з системного проектування на співбесідах
 
-> How to tackle a system design interview question.
+> Як вирішувати питання з системного проектування на співбесідах.
 
-The system design interview is an **open-ended conversation**.  You are expected to lead it.
+Співбесіда з системного проектування є **відкритою бесідою**.  Очікується, що ви будете її вести.
 
-You can use the following steps to guide the discussion.  To help solidify this process, work through the [System design interview questions with solutions](#system-design-interview-questions-with-solutions) section using the following steps.
+Ви можете використовувати наступні кроки, щоб вести дискусію.  Щоб закріпити цей процес, опрацюйте секцію [System design interview questions with solutions](#system-design-interview-questions-with-solutions) використовуючи наступні кроки.
 
-### Step 1: Outline use cases, constraints, and assumptions
+### Крок 1: Окресліть сценарії/варіанти використання, обмеження та припущення
 
-Gather requirements and scope the problem.  Ask questions to clarify use cases and constraints.  Discuss assumptions.
+Зберіть вимоги та оцініть обсяг задачі.  Задавайте питання для вияснення сценаріїв/варіантів використання та обмежень.  Обговорюйте припущення.
 
-* Who is going to use it?
-* How are they going to use it?
-* How many users are there?
-* What does the system do?
-* What are the inputs and outputs of the system?
-* How much data do we expect to handle?
-* How many requests per second do we expect?
-* What is the expected read to write ratio?
+* Хто буде це використовувати?
+* Як це будуть використовувати?
+* Скільки буде користувачів?
+* Що система буде робити?
+* Що є вхідними та вихідними даними для системи?
+* Скільки даних очікується обробляти?
+* Скільки запитів в секунду очікується?
+* Яким є очікуване співвідношення зчитувань до записів?
 
-### Step 2: Create a high level design
+### Крок 2: Створіть високорівневу архітектуру
 
-Outline a high level design with all important components.
+Виокреміть високорівневу архітектуру зі всіма важливими компонентами.
 
-* Sketch the main components and connections
-* Justify your ideas
+* Окресліть ключові компоненти та їх зв'язки
+* Обгрунтуйте ваші ідеї
 
-### Step 3: Design core components
+### Крок 3: Спроектуйте ключові компоненти
 
-Dive into details for each core component.  For example, if you were asked to [design a url shortening service](solutions/system_design/pastebin/README.md), discuss:
+Заглибтесь в деталі кожного ключового компоненту.  Наприклад, якщо вас попросили [design a url shortening service](solutions/system_design/pastebin/README.md), обговоріть:
 
-* Generating and storing a hash of the full url
-    * [MD5](solutions/system_design/pastebin/README.md) and [Base62](solutions/system_design/pastebin/README.md)
-    * Hash collisions
-    * SQL or NoSQL
-    * Database schema
-* Translating a hashed url to the full url
-    * Database lookup
-* API and object-oriented design
+* Генерацію і зберігання хешу повного url
+    * [MD5](solutions/system_design/pastebin/README.md) і [Base62](solutions/system_design/pastebin/README.md)
+    * Хеш-колізії
+    * SQL чи NoSQL
+    * Схему бази даних
+* Перехід з хешованого url до повного url
+    * Пошук в базі даних
+* API і об'єктно-орієнтовану архітектуру
 
-### Step 4: Scale the design
+### Крок 4: Зробіть архітектуру масштабованою
 
-Identify and address bottlenecks, given the constraints.  For example, do you need the following to address scalability issues?
+Визначте та вирішіть вузькі місця, враховуючи задані обмеження. Наприклад, чи потрібні вам наступні речі для вирішення проблем масштабування?
 
-* Load balancer
-* Horizontal scaling
-* Caching
-* Database sharding
+* Балансувальник навантаження(Load balancer)
+* Горизонтальне масштабування(Horizontal scaling)
+* Кешування(Caching)
+* Шардинг бази даних(Database sharding)
 
-Discuss potential solutions and trade-offs.  Everything is a trade-off.  Address bottlenecks using [principles of scalable system design](#index-of-system-design-topics).
+Обговорюйте потенційні рішення та компроміси.  Всі рішення є компромісами.  Вирішуйте слабкі місця, використовуючи [principles of scalable system design](#index-of-system-design-topics).
 
-### Back-of-the-envelope calculations
+### Попередні розрахунки
 
-You might be asked to do some estimates by hand.  Refer to the [Appendix](#appendix) for the following resources:
+Вас можуть попросити здійснити деякі грубі розрахунки.  Звертайтесь [Appendix](#appendix) до наступних джерел:
 
 * [Use back of the envelope calculations](http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)
 * [Powers of two table](#powers-of-two-table)
 * [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
 
-### Source(s) and further reading
+### Джерело(а) і додаткові матеріали
 
-Check out the following links to get a better idea of what to expect:
+Ознайомтесь з наступними посиланнями, щоб краще знати на що очікувати:
 
 * [How to ace a systems design interview](https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/)
 * [The system design interview](http://www.hiredintech.com/system-design)
