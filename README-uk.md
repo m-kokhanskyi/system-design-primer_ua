@@ -490,38 +490,38 @@ AP є хорошим вибором, якщо ваша задача потреб
 
 * [Transactions across data centers](http://snarfed.org/transactions_across_datacenters_io.html)
 
-## Availability patterns
+## Шаблони доступності
 
-There are two main patterns to support high availability: **fail-over** and **replication**.
+Існує два основних шаблони для підтримки високої доступності: **аварійне перключення(fail-over)** та **копіювання(replication)**.
 
-### Fail-over
+### Аварійне переключення (Fail-over)
 
-#### Active-passive
+#### Активний-пасивний (active-passive)
 
-With active-passive fail-over, heartbeats are sent between the active and the passive server on standby.  If the heartbeat is interrupted, the passive server takes over the active's IP address and resumes service.
+При аварійному переключенні виду "активний-пасивний" сигнали стану(heartbeat) пересилаються між активним та пасивним сервером в режимі очікування.  Якщо сигнал стану перестає поступати на пасивний сервер - він забирає IP адресу активного сервера і продовжує роботу.
 
-The length of downtime is determined by whether the passive server is already running in 'hot' standby or whether it needs to start up from 'cold' standby.  Only the active server handles traffic.
+Тривалість часу простою визначається тим чи пасивний сервер знаходиться в стані "гарячого" простою або він в "холодному" простої і йому потрібно завантажитись.  Трафік обслуговується лише активним сервером.
 
-Active-passive failover can also be referred to as master-slave failover.
+Аварійне переключення виду "активний-пасивний" можуть також називати аварійним переключенням типу "ведучий-ведений"(master-slave).
 
-#### Active-active
+#### Активний-активний (active-active)
 
-In active-active, both servers are managing traffic, spreading the load between them.
+При такому варіанті обидва сервери обслуговують трафік і розподіляють навантаження між собою.
 
-If the servers are public-facing, the DNS would need to know about the public IPs of both servers.  If the servers are internal-facing, application logic would need to know about both servers.
+Якщо сервери є публічними, то DNS повинен знати публічні IP обох серверів.  Якщо сервери використовуються для внутрішньої взаємодії - логіка додатку повинна знати про усі такі сервери.
 
-Active-active failover can also be referred to as master-master failover.
+Аварійне переключення виду "активний-активний" можуть також називати аварійним переключенням типу "ведучий-ведучий"(master-master).
 
-### Disadvantage(s): failover
+### Недоліки:
 
-* Fail-over adds more hardware and additional complexity.
-* There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.
+* Аварійне переключення вимагає наявності більшої кількості апаратного забезпечення та додатково ускладнює систему.
+* Існує ймовірність втрати даних при відмові активної системи до завершення процесу копіювання нових даних в пасивну.
 
-### Replication
+### Копіювання(Replication)
 
-#### Master-slave and master-master
+#### Ведучий-ведений(Master-slave) та (ведучий-ведучий)master-master
 
-This topic is further discussed in the [Database](#database) section:
+Ця тема обговорюється далі в секції [Database](#database):
 
 * [Master-slave replication](#master-slave-replication)
 * [Master-master replication](#master-master-replication)
