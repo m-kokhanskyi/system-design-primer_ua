@@ -365,75 +365,74 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 | Design a circular array | [Contribute](#contributing)  |
 | Add an object-oriented design question | [Contribute](#contributing) |
 
-## System design topics: start here
+## Проектування програмних систем: початок
 
-New to system design?
+Тільки починаєте вивчати проектування?
 
-First, you'll need a basic understanding of common principles, learning about what they are, how they are used, and their pros and cons.
+Спочатку вам потрібно розібратися на базовому рівні із основними поняттями, їх використанням, перевагами та недоліками.
 
-### Step 1: Review the scalability video lecture
+### Крок 1: Перегляньте відео-лекцію по масштабуванню
 
 [Scalability Lecture at Harvard](https://www.youtube.com/watch?v=-W9F__D3oY4)
 
-* Topics covered:
-    * Vertical scaling
-    * Horizontal scaling
-    * Caching
-    * Load balancing
-    * Database replication
-    * Database partitioning
+* Висвітленні теми:
+    * Вертикальне масштабування(Vertical scaling)
+    * Горизонтальне масштабування(Horizontal scaling)
+    * Кешування(Caching)
+    * Балансування навантаження(Load balancing)
+    * Реплікація(replication) бази даних
+    * Розбиття(partitioning) бази даних
 
-### Step 2: Review the scalability article
+### Step 2: Перегляньте статті по масштабуванню
 
 [Scalability](http://www.lecloud.net/tagged/scalability/chrono)
 
-* Topics covered:
+* Висвітленні теми:
     * [Clones](http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones)
     * [Databases](http://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database)
     * [Caches](http://www.lecloud.net/post/9246290032/scalability-for-dummies-part-3-cache)
     * [Asynchronism](http://www.lecloud.net/post/9699762917/scalability-for-dummies-part-4-asynchronism)
 
-### Next steps
+### Наступні кроки
 
-Next, we'll look at high-level trade-offs:
+Далі ми розглянемо базові компроміси:
 
-* **Performance** vs **scalability**
-* **Latency** vs **throughput**
-* **Availability** vs **consistency**
+* **Продуктивність(Performance)** vs **масштабування(scalability)**
+* **Латентність(Latency)** vs **пропускна здатність(throughput)**
+* **Доступність(Availability)** vs **узгодженість(consistency)**
 
-Keep in mind that **everything is a trade-off**.
+Пам'ятайте, що **все є компромісом**.
 
-Then we'll dive into more specific topics such as DNS, CDNs, and load balancers.
+Далі ми зануримося в більш вузькі розділи, як-от DNS, CDNs та балансувальники навантаження(load balancers). 
 
-## Performance vs scalability
+## Продуктивність(Performance) vs масштабування(scalability)
 
-A service is **scalable** if it results in increased **performance** in a manner proportional to resources added. Generally, increasing performance means serving more units of work, but it can also be to handle larger units of work, such as when datasets grow.<sup><a href=http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html>1</a></sup>
+Сервіс є **масштабованим**, якщо його **продуктивність** зростає пропорційно до доданих ресурсів. В загальному випадку, під збільшенням продуктивності розуміється можливість опрацьовувати більшу кількість задач, хоча це також може означати можливість опрацьовувати задачі більшого розміру, як у випадку росту набору даних (datasets).<sup><a href=http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html>1</a></sup>
 
-Another way to look at performance vs scalability:
+Ще один спосіб розглянути відміність між продуктивностю(performance) та масштабуванням(scalability):
 
-* If you have a **performance** problem, your system is slow for a single user.
-* If you have a **scalability** problem, your system is fast for a single user but slow under heavy load.
+* Якщо у вас проблема з **продуктивністю**, то ваша система буде повільною для одного користувача.
+* Якщо у вас проблема з **масштабуванням**, то ваша система буде швидкою для одного користувача, але повільною при високому навантаженні (багато користувачів).
 
-### Source(s) and further reading
+### Джерело(а) та додаткові матеріали
 
 * [A word on scalability](http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html)
 * [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
 
-## Latency vs throughput
+## Латентність(Latency) vs пропускна здатність(throughput)
 
-**Latency** is the time to perform some action or to produce some result.
+**Латентність** - це час затрачений на виконання задачі.
+**Пропускна здатність** - це кількість таких задач за одиницю часу.
 
-**Throughput** is the number of such actions or results per unit of time.
+В загальному випадку, наша ціль - це **максимальна пропускна здатність** з **допустимою латентністю**.
 
-Generally, you should aim for **maximal throughput** with **acceptable latency**.
-
-### Source(s) and further reading
+### Джерело(а) та додаткові матеріали
 
 * [Understanding latency vs throughput](https://community.cadence.com/cadence_blogs_8/b/sd/archive/2010/09/13/understanding-latency-vs-throughput)
 
-## Availability vs consistency
+## Доступність(Availability) vs узгодженість(consistency)
 
-### CAP theorem
+### Теорема CAP
 
 <p align="center">
   <img src="http://i.imgur.com/bgLMI2u.png">
@@ -441,25 +440,25 @@ Generally, you should aim for **maximal throughput** with **acceptable latency**
   <i><a href=http://robertgreiner.com/2014/08/cap-theorem-revisited>Source: CAP theorem revisited</a></i>
 </p>
 
-In a distributed computer system, you can only support two of the following guarantees:
+У розподіленій комп'ютерній системі можна підтримувати тільки дві властивості з наведених:
 
-* **Consistency** - Every read receives the most recent write or an error
-* **Availability** - Every request receives a response, without guarantee that it contains the most recent version of the information
-* **Partition Tolerance** - The system continues to operate despite arbitrary partitioning due to network failures
+* **Узгодженість(Consistency)** - Кожне зчитування отримує останні дані або помилку.
+* **Доступність(Availability)** - Кожний запит отримує результат, але без гарантії, що це буде остання версія даних.
+* **Стійкість до розподілення(Partition Tolerance)** - Система продовжує функціонувати незважаючи на випадкові розділення на ізольовоні секції в результаті мережевих проблем.
 
-*Networks aren't reliable, so you'll need to support partition tolerance.  You'll need to make a software tradeoff between consistency and availability.*
+*Мережі є ненадійними, тому вам прийдеться підтримувати стійкість до розподілення. Програмний компроміс прийдеться робити між узгодженістю та доступністю.*
 
-#### CP - consistency and partition tolerance
+#### CP - узгодженність(consistency) і стійкість до розподілення(partition tolerance)
 
-Waiting for a response from the partitioned node might result in a timeout error.  CP is a good choice if your business needs require atomic reads and writes.
+Очікування результату від ізольованого вузла може завершитися помилкою ліміту часу. CP є хорошим рішенням, якщо ваша задача потребує атомарні записи та зчитування.
 
-#### AP - availability and partition tolerance
+#### AP - доступність(availability) and стійкість до розподілення(partition tolerance)
 
-Responses return the most recent version of the data available on a node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.
+Відповідь містить останню версію даних, що доступна на конкретному вузлі, але вона може бути не глобально останньою. Поширення запису може зайняти певний час після того як розподілення усунено.
 
-AP is a good choice if the business needs allow for [eventual consistency](#eventual-consistency) or when the system needs to continue working despite external errors.
+AP є хорошим вибором, якщо ваша задача потребує [eventual consistency](#eventual-consistency) чи коли система має продовжувати роботу незважаючи на зовнішні помилки.
 
-### Source(s) and further reading
+### Джерело(а) та додаткові матеріали
 
 * [CAP theorem revisited](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
 * [A plain english introduction to CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)
@@ -1784,3 +1783,4 @@ My contact info can be found on my [GitHub page](https://github.com/donnemartin)
     Creative Commons Attribution 4.0 International License (CC BY 4.0)
 
     http://creativecommons.org/licenses/by/4.0/
+	
