@@ -564,7 +564,7 @@ Services such as [CloudFlare](https://www.cloudflare.com/dns/) and [Route 53](ht
 * [Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System)
 * [DNS articles](https://support.dnsimple.com/categories/dns/)
 
-## Content delivery network
+## Мережа доставки контенту(Content delivery network)
 
 <p align="center">
   <img src="http://i.imgur.com/h9TAuGI.jpg">
@@ -572,34 +572,33 @@ Services such as [CloudFlare](https://www.cloudflare.com/dns/) and [Route 53](ht
   <i><a href=https://www.creative-artworks.eu/why-use-a-content-delivery-network-cdn/>Source: Why use a CDN</a></i>
 </p>
 
-A content delivery network (CDN) is a globally distributed network of proxy servers, serving content from locations closer to the user.  Generally, static files such as HTML/CSS/JS, photos, and videos are served from CDN, although some CDNs such as Amazon's CloudFront support dynamic content.  The site's DNS resolution will tell clients which server to contact.
+Мережа доставки контенту (CDN) - це географічно розподілена мережа проксі-серверів для доставки контенту із вузлів, що знаходяться найближче до користувача. В загальному випадку використовується для статичних файлів, як-от HTML/CSS/JS, фото та відео, хоча деякі CDN, наприклад CloudFront від Amazon, підтримують і динамічний контент. Веб-сайт за допомогою DNS вкаже з якого серверу завантажувати контент.
 
-Serving content from CDNs can significantly improve performance in two ways:
+Використання CDN'ів може істотно підвищити продуктивність двома способами:
 
-* Users receive content at data centers close to them
-* Your servers do not have to serve requests that the CDN fulfills
+* Користувачі отримують контент із дата центрів, що поблизу
+* Ваші сервери не мають обробляти запити, що виконують CDN'и
 
-### Push CDNs
+### Push CDN'и
 
-Push CDNs receive new content whenever changes occur on your server.  You take full responsibility for providing content, uploading directly to the CDN and rewriting URLs to point to the CDN.  You can configure when content expires and when it is updated.  Content is uploaded only when it is new or changed, minimizing traffic, but maximizing storage.
+Push CDN'и отримують новий контент як тільки появляються зміни на вашому сервері. Вам потрібно надавати контент, завантажуючи його напряму в CDN, і змінювати посилання, так щоб вони вказували на CDN. Ви можете налаштовувати, коли видаляти контент і коли обновляти. Контент завантажувається тільки, коли він новий або зміненний, таким чином мінімізуючи трафік, але максимізуючи пам'ять.
 
-Sites with a small amount of traffic or sites with content that isn't often updated work well with push CDNs.  Content is placed on the CDNs once, instead of being re-pulled at regular intervals.
+Веб-сайти з малим об'ємом трафіку чи з контентом, що рідко змінюється, працюють добре із push CDN'ами. Контент завантажується в CDN`и одноразово, а не періодично по таймеру.
 
-### Pull CDNs
+### Pull CDN'и
 
-Pull CDNs grab new content from your server when the first user requests the content.  You leave the content on your server and rewrite URLs to point to the CDN.  This results in a slower request until the content is cached on the CDN.
+Pull CDN'и завантажують новий контент з вашого сервера, коли перший користувач його запросить. Ви залишаєте контент на вашому сервері і переписуєте посилання так щоб вони вказували на CDN. Це призводить до більш повільного запиту, поки вміст не буде закешовано на CDN.
 
-A [time-to-live (TTL)](https://en.wikipedia.org/wiki/Time_to_live) determines how long content is cached.  Pull CDNs minimize storage space on the CDN, but can create redundant traffic if files expire and are pulled before they have actually changed.
+[time-to-live (TTL)](https://en.wikipedia.org/wiki/Time_to_live) задає як довго контент зберігатиметься у кеші.  Pull CDN'и мінімізують об'єм використаної пам'яті CDN'у, але можуть призвести до лишнього трафіку, коли файли повторно завантажуються із сервера до того як їх було змінено.
+Pull CDN`и добре працюють з високонавантаженими веб-сайтами, тому що трафік розподіляється більш рівномірно і тільки нещодавно запитаний контент зберігається на CDN.
 
-Sites with heavy traffic work well with pull CDNs, as traffic is spread out more evenly with only recently-requested content remaining on the CDN.
+### Недолік(и):
 
-### Disadvantage(s): CDN
+* Вартісь CDN може бути істотною залежно від трафіку, проте потрібно також враховувати скільки коштуватиме опрацювання запитів без CDN.
+* Контент в CDN може бути застарілим, якщо його обновили до того як завершився термін дії(TTL).
+* Потрібно змінити посилання на статичні файли так, щоб вони вказували на CDN.
 
-* CDN costs could be significant depending on traffic, although this should be weighed with additional costs you would incur not using a CDN.
-* Content might be stale if it is updated before the TTL expires it.
-* CDNs require changing URLs for static content to point to the CDN.
-
-### Source(s) and further reading
+### Джерело(а) і додаткові матеріали
 
 * [Globally distributed content delivery](https://figshare.com/articles/Globally_distributed_content_delivery/6605972)
 * [The differences between push and pull CDNs](http://www.travelblogadvice.com/technical/the-differences-between-push-and-pull-cdns/)
