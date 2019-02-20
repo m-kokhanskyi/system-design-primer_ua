@@ -604,7 +604,7 @@ Pull CDN`и добре працюють з високонавантаженим�
 * [The differences between push and pull CDNs](http://www.travelblogadvice.com/technical/the-differences-between-push-and-pull-cdns/)
 * [Wikipedia](https://en.wikipedia.org/wiki/Content_delivery_network)
 
-## Load balancer
+## Балансувальник навантаження (Load balancer)
 
 <p align="center">
   <img src="http://i.imgur.com/h81n9iK.png">
@@ -612,30 +612,30 @@ Pull CDN`и добре працюють з високонавантаженим�
   <i><a href=http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html>Source: Scalable system design patterns</a></i>
 </p>
 
-Load balancers distribute incoming client requests to computing resources such as application servers and databases.  In each case, the load balancer returns the response from the computing resource to the appropriate client.  Load balancers are effective at:
+Балансувальники навантаження розподіляють клієнтські запити до обчислювальних ресурсів, як-от: сервери застосунків (application servers) та бази даних (databases). В кожному випадку балансувальник навантаження повертає результат з обчислювального ресурсу відповідному клієнту. Балансувальники навантаження ефективні для:
 
-* Preventing requests from going to unhealthy servers
-* Preventing overloading resources
-* Helping eliminate single points of failure
+* Запобігання надходження запитів до серверів із проблемами
+* Запобігання перевантаження ресурсів
+* Допомоги в усуненні єдиної точки відмови
 
-Load balancers can be implemented with hardware (expensive) or with software such as HAProxy.
+Балансувальники навантаження можуть бути реалізовані за допомогою апаратних засобів (дорого) або програмного забезпечення такого як HAProxy.
 
-Additional benefits include:
+Додаткові переваги:
 
-* **SSL termination** - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
-    * Removes the need to install [X.509 certificates](https://en.wikipedia.org/wiki/X.509) on each server
-* **Session persistence** - Issue cookies and route a specific client's requests to same instance if the web apps do not keep track of sessions
+* **Припинення SSL (SSL termination)** - Розшифровуються вхідні запити та шифруються відповіді серверів. Таким чином сервери не повинні виконувати ці, потенційно затратні, операції.
+* Усунення необхідності встановлення [X.509 certificates](https://en.wikipedia.org/wiki/X.509) на кожен сервер.
+* **Постійність сесії (Session persistence)** - Видаються кукі та направляються клієнтські запити до того ж самого сервера кожного разу, за умови, якщо веб-застосунок не відстежує сесії смостійно.
 
-To protect against failures, it's common to set up multiple load balancers, either in [active-passive](#active-passive) or [active-active](#active-active) mode.
+Для того, щоб захиститися від збоїв, часто встановлюють декілька балансувальників навантаження в [active-passive](#active-passive) або [active-active](#active-active) режимі.
 
-Load balancers can route traffic based on various metrics, including:
+Балансувальники навантаження можуть направляти трафік різними способами:
 
-* Random
-* Least loaded
-* Session/cookies
+* Використання випадкового сервера
+* Використання найменш навантаженного сервера
+* Використання сервера на основі сесії/кукі
 * [Round robin or weighted round robin](http://g33kinfo.com/info/archives/2657)
-* [Layer 4](#layer-4-load-balancing)
-* [Layer 7](#layer-7-load-balancing)
+* [4 мережевого рівня] (#layer-4-load-balancing)
+* [7 мережевого рівня] (#layer-7-load-balancing)
 
 ### Балансувальники навантаження 4 мережевого рівня 
 
