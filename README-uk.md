@@ -674,7 +674,7 @@ Pull CDN`и добре працюють з високонавантаженим�
 * [Layer 7 load balancing](https://www.nginx.com/resources/glossary/layer-7-load-balancing/)
 * [ELB listener config](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html)
 
-## Reverse proxy (web server)
+## Зворотній проксі(Reverse proxy)
 
 <p align="center">
   <img src="http://i.imgur.com/n41Azff.png">
@@ -683,34 +683,34 @@ Pull CDN`и добре працюють з високонавантаженим�
   <br/>
 </p>
 
-A reverse proxy is a web server that centralizes internal services and provides unified interfaces to the public.  Requests from clients are forwarded to a server that can fulfill it before the reverse proxy returns the server's response to the client.
+Зворотній проксі - це веб-сервер, що надає уніфікований публічний інферфейс до групи внутрішніх серверів. Клієнські запити ретранслюються на підходящий внутрішній сервер, а результат повертає клієнту проксі сервер.
 
-Additional benefits include:
+Додаткові переваги:
 
-* **Increased security** - Hide information about backend servers, blacklist IPs, limit number of connections per client
-* **Increased scalability and flexibility** - Clients only see the reverse proxy's IP, allowing you to scale servers or change their configuration
-* **SSL termination** - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
-    * Removes the need to install [X.509 certificates](https://en.wikipedia.org/wiki/X.509) on each server
-* **Compression** - Compress server responses
-* **Caching** - Return the response for cached requests
-* **Static content** - Serve static content directly
+* **Підвищена безпека** - Приховування інформації про внутрішні сервери, блокування IP адрес, обмеження кількості з'єднань для одного корисувача 
+* **Підвищена масштабованість та гнучкість** - Клієнти бачать тільки IP адрес зворотнього проксі, що дозволяє масштабувати внутрішні сервери чи міняти їх конфігурацію
+* **Припинення SSL(SSL termination)** - Розшифровуються вхідні запити та шифруються відповіді серверів. Таким чином сервери не повинні виконувати ці, потенційно затратні, операції
+	* Усунення необхідності встановлення [X.509 certificates](https://		en.wikipedia.org/wiki/X.509) на кожен сервер
+* **Стиснення(Compression)** - Стискаються відповіді серверів
+* **Кешування** - Повертається результат для закешованих запитів
+* **Статичний контент** - Надається статичний контент
     * HTML/CSS/JS
     * Photos
     * Videos
     * Etc
 
-### Load balancer vs reverse proxy
+### Балансувальник навантаження(Load balancer) vs зворотній проксі(reverse proxy)
 
-* Deploying a load balancer is useful when you have multiple servers.  Often, load balancers  route traffic to a set of servers serving the same function.
-* Reverse proxies can be useful even with just one web server or application server, opening up the benefits described in the previous section.
-* Solutions such as NGINX and HAProxy can support both layer 7 reverse proxying and load balancing.
+* Балансувальник навантаження корисний, коли у вас є кілька серверів. Часто ці сервери виконують однакову функцію.
+* Зворотній проксі може бути корисний навіть з одним сервером, надаючи переваги описані у попередній секції.
+* Такі рішення як-от NGINX та HAProxy підтримують зворотній проксі 7 рівня та балансування навантаження.
 
-### Disadvantage(s): reverse proxy
+### Недолік(и): зворотній проксі
 
-* Introducing a reverse proxy results in increased complexity.
-* A single reverse proxy is a single point of failure, configuring multiple reverse proxies (ie a [failover](https://en.wikipedia.org/wiki/Failover)) further increases complexity.
+* Використання зворотнього проксі збільшує складність.
+* Один зворотній проксі - одна точка відмови, декілька - ще більше збільшення складності (ie a [failover](https://en.wikipedia.org/wiki/Failover)).
 
-### Source(s) and further reading
+### Джерело(а) і додаткові матеріали
 
 * [Reverse proxy vs load balancer](https://www.nginx.com/resources/glossary/reverse-proxy-vs-load-balancer/)
 * [NGINX architecture](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
