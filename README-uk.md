@@ -717,7 +717,7 @@ Pull CDN`и добре працюють з високонавантаженим�
 * [HAProxy architecture guide](http://www.haproxy.org/download/1.2/doc/architecture.txt)
 * [Wikipedia](https://en.wikipedia.org/wiki/Reverse_proxy)
 
-## Application layer
+## Прикладний рівень
 
 <p align="center">
   <img src="http://i.imgur.com/yB5SYwm.png">
@@ -725,26 +725,26 @@ Pull CDN`и добре працюють з високонавантаженим�
   <i><a href=http://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer>Source: Intro to architecting systems for scale</a></i>
 </p>
 
-Separating out the web layer from the application layer (also known as platform layer) allows you to scale and configure both layers independently.  Adding a new API results in adding application servers without necessarily adding additional web servers.  The **single responsibility principle** advocates for small and autonomous services that work together.  Small teams with small services can plan more aggressively for rapid growth.
+Відокремлення веб рівня від прикладного(його також називають платформовим) дозволяє вам масштабуватись та незалежно конфігурувати обидва рівні. Для додавання нового API необхідно додавати нові сервери додатків без необхідності додавання веб серверів. **Принцип єдиного обов'язку** пропагує маленькі та автономні сервіси, котрі працюють разом.  Він дозволяє невеликим командам з малими сервісами більш агресивно планувати швидкий розвиток.
 
-Workers in the application layer also help enable [asynchronism](#asynchronism).
+Також працівники(ЕОМ) на прикладному рівні допомагають підтримувати [asynchronism](#asynchronism).
 
-### Microservices
+### Мікросервіси
 
-Related to this discussion are [microservices](https://en.wikipedia.org/wiki/Microservices), which can be described as a suite of independently deployable, small, modular services.  Each service runs a unique process and communicates through a well-defined, lightweight mechanism to serve a business goal. <sup><a href=https://smartbear.com/learn/api-design/what-are-microservices>1</a></sup>
+З питанням прикладного рівня пов'язані [microservices](https://en.wikipedia.org/wiki/Microservices), які можуть бути описані як набір незалежно розгортуваних, малих, модульних сервісів.  Кожен сервіс виконується в унікальному процесі і спілкується через добре визначений, легкий механізм задля обслуговування цілі бізнесу. <sup><a href=https://smartbear.com/learn/api-design/what-are-microservices>1</a></sup>
 
-Pinterest, for example, could have the following microservices: user profile, follower, feed, search, photo upload, etc.
+Для прикладу, Pinterest, міг би мати наступні мікросервіси: профілю користувача, послідовника, стрічки новин, пошуку, завантаження фото, та інші.
 
-### Service Discovery
+### Виявлення сервісів
 
-Systems such as [Consul](https://www.consul.io/docs/index.html), [Etcd](https://coreos.com/etcd/docs/latest), and [Zookeeper](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper) can help services find each other by keeping track of registered names, addresses, and ports.  [Health checks](https://www.consul.io/intro/getting-started/checks.html) help verify service integrity and are often done using an [HTTP](#hypertext-transfer-protocol-http) endpoint.  Both Consul and Etcd have a built in [key-value store](#key-value-store) that can be useful for storing config values and other shared data.
+Такі системи, як [Consul](https://www.consul.io/docs/index.html), [Etcd](https://coreos.com/etcd/docs/latest), та [Zookeeper](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper) можуть допомогти сервісам находити один одного шляхом відстеження зареєстрованих імен, адрес та портів.  [Health checks](https://www.consul.io/intro/getting-started/checks.html) допомагають верифікувати цілісність сервісу і часто виконуються з використанням [HTTP](#hypertext-transfer-protocol-http) ендпойнтів.  Consul та Etcd мають вбудоване [key-value store](#key-value-store), яке може бути корисним для зберігання конфігурації та інших спільних даних.
 
-### Disadvantage(s): application layer
+### Недолік(и): прикладний рівень
 
-* Adding an application layer with loosely coupled services requires a different approach from an architectural, operations, and process viewpoint (vs a monolithic system).
-* Microservices can add complexity in terms of deployments and operations.
+* Додавання прикладого рівня з слабо зв'язаними сервісами вимагає іншого підходу з архітектурної, операційної та процесової точки зору (порівняно з монолітною системою).
+* Мікросервіси можуть збільшувати складність розгортання та обслуговування серверів.
 
-### Source(s) and further reading
+### Джерело(а) і додаткові матеріали
 
 * [Intro to architecting systems for scale](http://lethain.com/introduction-to-architecting-systems-for-scale)
 * [Crack the system design interview](http://www.puncsky.com/blog/2016-02-13-crack-the-system-design-interview)
