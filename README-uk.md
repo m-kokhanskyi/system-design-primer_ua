@@ -1,9 +1,11 @@
-*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [Arabic](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [Bengali](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Brazilian Portuguese](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [German](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [Greek](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [Italian](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [Korean](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [Persian](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polish](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [Russian](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Spanish](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [Thai](https://github.com/donnemartin/system-design-primer/issues/187) ∙ [Turkish](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [Vietnamese](https://github.com/donnemartin/system-design-primer/issues/127) ∙ [Українська](README-uk.md)  | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
+*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [العَرَبِيَّة‎](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [বাংলা](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Português do Brasil](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Deutsch](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [ελληνικά](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [עברית](https://github.com/donnemartin/system-design-primer/issues/272) ∙ [Italiano](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [한국어](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [فارسی](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polski](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [русский язык](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Español](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [ภาษาไทย](https://github.com/donnemartin/system-design-primer/issues/187) ∙ [Türkçe](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [tiếng Việt](https://github.com/donnemartin/system-design-primer/issues/127) ∙ [Français](https://github.com/donnemartin/system-design-primer/issues/250) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
+
+**Допоможи з [перекладом](TRANSLATIONS.md) цього посібника!**
 
 # Вступ до проектування програмних систем
 
 <p align="center">
-  <img src="http://i.imgur.com/jj3A5N8.png">
+  <img src="images/jj3A5N8.png">
   <br/>
 </p>
 
@@ -33,56 +35,56 @@
 
 **Практикуйтеся на типових задачах по проектуванню, які запитують на співбесідах** та **порівнюйте** Ваші рішення із **запропонованими**: обговореннями, кодом та діаграмами.
 
-Додаткові розділи для підготовки до співбесід:
+Додаткові розділи для підготовки до співбесіди:
 
 * [Study guide](#study-guide)
-* [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
-* [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions)
-* [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions)
-* [Additional system design interview questions](#additional-system-design-interview-questions)
+* [Як підходити до питань з системного проектування на співбесідах](#Як-підходити-до-питань-з-системного-проектування-на-співбесідах)
+* [Задачі по проектуванню на співбесідах, **з рішеннями**](#Задачі-по-проектуванню-на-співбесідах-з-рішеннями)
+* [Задачі по об’єктно-орієнтованому проектуванню на співбесідах, **з рішеннями**](#Задачі-по-обєктно-орієнтованому-проектуванню-на-співбесідах-з-рішеннями)
+* [Додаткові задачі по проектуванню на співбесідах](#Додаткові-задачі-по-проектуванню-на-співбесідах)
 
-## Anki flashcards
+## Картки Anki
 
 <p align="center">
-  <img src="http://i.imgur.com/zdCAkB3.png">
+  <img src="images/zdCAkB3.png">
   <br/>
 </p>
 
-The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.
+Використовуйте [Anki flashcard decks](https://apps.ankiweb.net/) для інтервального повторення що допоможе вам запамятати ключові концепції проектування систем.
 
-* [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
-* [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
-* [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
+* [Проектування систем](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
+* [Вправи з проектування систем](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
+* [Вправи з об’єктно-орієнтованого проектування](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
 
-Great for use while on-the-go.
+Чудово підходить для використання в дорозі.
 
-### Coding Resource: Interactive Coding Challenges
+### Ресурси по програмуванню: Інтерактивні завдання
 
-Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
+Шукаєте ресурси які допоможуть вам підготуватися до [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
 
 <p align="center">
-  <img src="http://i.imgur.com/b4YtAEN.png">
+  <img src="images/b4YtAEN.png">
   <br/>
 </p>
 
-Check out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), which contains an additional Anki deck:
+Подивіться на наш дочірній репозиторій: [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), який містить додатковий набір Anki карт:
 
-* [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
+* [Програмування](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
 
-## Contributing
+## Підтримка
 
-> Learn from the community.
+> Вчіться у спільноти.
 
-Feel free to submit pull requests to help:
+Не соромся відправляти запити на виправлення щоб допомогти:
 
-* Fix errors
-* Improve sections
-* Add new sections
-* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
+* Виправлення помилок
+* Покращення секцій
+* Додавання нових секцій
+* [Перекладайте](https://github.com/donnemartin/system-design-primer/issues/28)
 
-Content that needs some polishing is placed [under development](#under-development).
+Матеріал який потрібно доопрацювати розміщається в розділі [В розробці](#В-розробці).
 
-Review the [Contributing Guidelines](CONTRIBUTING.md).
+Ознайомтесь з [Інструкцією щодо допомоги](CONTRIBUTING.md).
 
 ## Перелік тем з системного дизайну
 
@@ -91,96 +93,97 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 > Кожна секція містить посилання на ресурси для поглибленого вивчення.
 
 <p align="center">
-  <img src="http://i.imgur.com/jrUBAF7.png">
+  <img src="images/jrUBAF7.png">
   <br/>
 </p>
 
 * [System design topics: start here](#system-design-topics-start-here)
-    * [Step 1: Review the scalability video lecture](#step-1-review-the-scalability-video-lecture)
-    * [Step 2: Review the scalability article](#step-2-review-the-scalability-article)
-    * [Next steps](#next-steps)
+  * [Step 1: Review the scalability video lecture](#step-1-review-the-scalability-video-lecture)
+  * [Step 2: Review the scalability article](#step-2-review-the-scalability-article)
+  * [Next steps](#next-steps)
 * [Performance vs scalability](#performance-vs-scalability)
 * [Latency vs throughput](#latency-vs-throughput)
 * [Availability vs consistency](#availability-vs-consistency)
-    * [CAP theorem](#cap-theorem)
-        * [CP - consistency and partition tolerance](#cp---consistency-and-partition-tolerance)
-        * [AP - availability and partition tolerance](#ap---availability-and-partition-tolerance)
+  * [CAP theorem](#cap-theorem)
+    * [CP - consistency and partition tolerance](#cp---consistency-and-partition-tolerance)
+    * [AP - availability and partition tolerance](#ap---availability-and-partition-tolerance)
 * [Consistency patterns](#consistency-patterns)
-    * [Weak consistency](#weak-consistency)
-    * [Eventual consistency](#eventual-consistency)
-    * [Strong consistency](#strong-consistency)
+  * [Weak consistency](#weak-consistency)
+  * [Eventual consistency](#eventual-consistency)
+  * [Strong consistency](#strong-consistency)
 * [Availability patterns](#availability-patterns)
-    * [Fail-over](#fail-over)
-    * [Replication](#replication)
+  * [Fail-over](#fail-over)
+  * [Replication](#replication)
+  * [Availability in numbers](#availability-in-numbers)
 * [Domain name system](#domain-name-system)
 * [Content delivery network](#content-delivery-network)
-    * [Push CDNs](#push-cdns)
-    * [Pull CDNs](#pull-cdns)
+  * [Push CDNs](#push-cdns)
+  * [Pull CDNs](#pull-cdns)
 * [Load balancer](#load-balancer)
-    * [Active-passive](#active-passive)
-    * [Active-active](#active-active)
-    * [Layer 4 load balancing](#layer-4-load-balancing)
-    * [Layer 7 load balancing](#layer-7-load-balancing)
-    * [Horizontal scaling](#horizontal-scaling)
+  * [Active-passive](#active-passive)
+  * [Active-active](#active-active)
+  * [Layer 4 load balancing](#layer-4-load-balancing)
+  * [Layer 7 load balancing](#layer-7-load-balancing)
+  * [Horizontal scaling](#horizontal-scaling)
 * [Reverse proxy (web server)](#reverse-proxy-web-server)
-    * [Load balancer vs reverse proxy](#load-balancer-vs-reverse-proxy)
+  * [Load balancer vs reverse proxy](#load-balancer-vs-reverse-proxy)
 * [Application layer](#application-layer)
-    * [Microservices](#microservices)
-    * [Service discovery](#service-discovery)
-* [Database](#database)
-    * [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
-        * [Master-slave replication](#master-slave-replication)
-        * [Master-master replication](#master-master-replication)
-        * [Federation](#federation)
-        * [Sharding](#sharding)
-        * [Denormalization](#denormalization)
-        * [SQL tuning](#sql-tuning)
-    * [NoSQL](#nosql)
-        * [Key-value store](#key-value-store)
-        * [Document store](#document-store)
-        * [Wide column store](#wide-column-store)
-        * [Graph Database](#graph-database)
-    * [SQL or NoSQL](#sql-or-nosql)
+  * [Microservices](#microservices)
+  * [Service discovery](#service-discovery)
+* [База даних](#база-даних)
+  * [Система управління реляційними базами даних (RDBMS)](#Система-управління-реляційними-базами-даних-rdbms)
+    * [Master-slave replication](#master-slave-replication)
+    * [Master-master replication](#master-master-replication)
+    * [Federation](#federation)
+    * [Sharding](#sharding)
+    * [Denormalization](#denormalization)
+    * [SQL tuning](#sql-tuning)
+  * [NoSQL](#nosql)
+    * [Key-value store](#key-value-store)
+    * [Document store](#document-store)
+    * [Wide column store](#wide-column-store)
+    * [Graph Database](#graph-database)
+  * [SQL or NoSQL](#sql-or-nosql)
 * [Cache](#cache)
-    * [Client caching](#client-caching)
-    * [CDN caching](#cdn-caching)
-    * [Web server caching](#web-server-caching)
-    * [Database caching](#database-caching)
-    * [Application caching](#application-caching)
-    * [Caching at the database query level](#caching-at-the-database-query-level)
-    * [Caching at the object level](#caching-at-the-object-level)
-    * [When to update the cache](#when-to-update-the-cache)
-        * [Cache-aside](#cache-aside)
-        * [Write-through](#write-through)
-        * [Write-behind (write-back)](#write-behind-write-back)
-        * [Refresh-ahead](#refresh-ahead)
+  * [Client caching](#client-caching)
+  * [CDN caching](#cdn-caching)
+  * [Web server caching](#web-server-caching)
+  * [Database caching](#database-caching)
+  * [Application caching](#application-caching)
+  * [Caching at the database query level](#caching-at-the-database-query-level)
+  * [Caching at the object level](#caching-at-the-object-level)
+  * [When to update the cache](#when-to-update-the-cache)
+    * [Cache-aside](#cache-aside)
+    * [Write-through](#write-through)
+    * [Write-behind (write-back)](#write-behind-write-back)
+    * [Refresh-ahead](#refresh-ahead)
 * [Asynchronism](#asynchronism)
-    * [Message queues](#message-queues)
-    * [Task queues](#task-queues)
-    * [Back pressure](#back-pressure)
+  * [Message queues](#message-queues)
+  * [Task queues](#task-queues)
+  * [Back pressure](#back-pressure)
 * [Communication](#communication)
-    * [Transmission control protocol (TCP)](#transmission-control-protocol-tcp)
-    * [User datagram protocol (UDP)](#user-datagram-protocol-udp)
-    * [Remote procedure call (RPC)](#remote-procedure-call-rpc)
-    * [Representational state transfer (REST)](#representational-state-transfer-rest)
+  * [Transmission control protocol (TCP)](#transmission-control-protocol-tcp)
+  * [User datagram protocol (UDP)](#user-datagram-protocol-udp)
+  * [Remote procedure call (RPC)](#remote-procedure-call-rpc)
+  * [Representational state transfer (REST)](#representational-state-transfer-rest)
 * [Security](#security)
 * [Appendix](#appendix)
-    * [Powers of two table](#powers-of-two-table)
-    * [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
-    * [Additional system design interview questions](#additional-system-design-interview-questions)
-    * [Real world architectures](#real-world-architectures)
-    * [Company architectures](#company-architectures)
-    * [Company engineering blogs](#company-engineering-blogs)
-* [Under development](#under-development)
+  * [Powers of two table](#powers-of-two-table)
+  * [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
+  * [Additional system design interview questions](#additional-system-design-interview-questions)
+  * [Real world architectures](#real-world-architectures)
+  * [Company architectures](#company-architectures)
+  * [Company engineering blogs](#company-engineering-blogs)
+* [В розробці](#В-розробці)
 * [Credits](#credits)
 * [Contact info](#contact-info)
 * [License](#license)
-
+* 
 ## Навчальний план
 
 > Запропоновані теми для ознайомлення базуються на вашому графіку співбесід (короткому, середньому, довгому).
 
-![Imgur](http://i.imgur.com/OfVllex.png)
+![Imgur](images/OfVllex.png)
 
 **Питання: Чи повинен я знати все описане тут для співбесіди?**
 
@@ -194,23 +197,23 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 * Компанії, в якій ви співбесідуєтесь 
 * Вашої вдачі
 
-Зазвичай очікується, що кандидати з більшим досвідом знають більше про системне проектування.  Архітектори або лідери команд мали б знати більше ніж окремі виконавці.  Ймовірно саме тому найкращі технологічні компанії мають один або кілька раундів співбесід по проектуванню систем.
+Зазвичай очікується, що кандидати з більшим досвідом знають більше про системне проектування. Архітектори або лідери команд мали б знати більше ніж окремі виконавці. Ймовірно саме тому найкращі технологічні компанії мають один або кілька раундів співбесід по проектуванню систем.
 
-Одразу розпочинайте з кількох тем.  Це допоможе вам дізнатись трішки про різноманітні ключові теми системного проектування.  Коректуйте цей посібник залежно від вашого часу, досвіду, позиції, на яку ви співбесідуєтесь, і компанії, в яку ви співбесідуєтесь.
+Одразу розпочинайте з кількох тем. Це допоможе вам дізнатись трішки про різноманітні ключові теми системного проектування. Коректуйте цей посібник залежно від вашого часу, досвіду, позиції, на яку ви співбесідуєтесь, і компанії, в яку ви співбесідуєтесь.
 
-* **При короткому відрізку часу** - Вашою ціллю є осягнути **вширину** теми системного проектування.  Практикуйтеся, розв'язуючи **деякі** питання зі співбесід.
-* **При середньому відрізку часу** - Вашою ціллю є осягнути **вширину** і **трішки вглибину** теми системного проектування.  Практикуйтеся, розв'язуючи **багато** питань зі співбесід.
-* **При довгому відрізку часу** - Вашою ціллю є осягнути **вширину** і **більше вглибину** теми системного проектування.  Практикуйтеся, розв'язуючи **більшість** питань зі співбесід.
+* **При короткому відрізку часу** - Вашою ціллю є осягнути **вширину** теми системного проектування. Практикуйтеся, розв'язуючи **деякі** питання зі співбесід.
+* **При середньому відрізку часу** - Вашою ціллю є осягнути **вширину** і **трішки вглибину** теми системного проектування. Практикуйтеся, розв'язуючи **багато** питань зі співбесід.
+* **При довгому відрізку часу** - Вашою ціллю є осягнути **вширину** і **більше вглибину** теми системного проектування. Практикуйтеся, розв'язуючи **більшість** питань зі співбесід.
 
-| | Короткий | Середній | Довгий |
-|---|---|---|---|
-| Прочитайте [System design topics](#index-of-system-design-topics), щоб отримати широке розуміння того, як працюють системи | :+1: | :+1: | :+1: |
-| Прочитайте кілька статей в [Company engineering blogs](#company-engineering-blogs) компаній, де ви проходите співбесіду | :+1: | :+1: | :+1: |
-| Прочитайте кілька [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
-| Перегляньте [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
-| Опрацюйте [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Кілька | Багато | Майже всі |
-| Опрацюйте [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Кілька | Багато | Майже всі |
-| Перегляньте [Additional system design interview questions](#additional-system-design-interview-questions) | Кілька | Багато | Майже всі |
+|                                                                                                                                                                 | Короткий | Середній | Довгий |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---|---|
+| Прочитайте [Перелік тем з системного дизайну](#Перелік-тем-з-системного-дизайну), щоб отримати широке розуміння того, як працюють системи                       | :+1: | :+1: | :+1: |
+| Прочитайте кілька статей в [Company engineering blogs](#company-engineering-blogs) компаній, де ви проходите співбесіду                                         | :+1: | :+1: | :+1: |
+| Прочитайте кілька [Real world architectures](#real-world-architectures)                                                                                         | :+1: | :+1: | :+1: |
+| Перегляньте [Як підходити до питань з системного проектування на співбесідах](#Як-підходити-до-питань-з-системного-проектування-на-співбесідах)                 | :+1: | :+1: | :+1: |
+| Опрацюйте [Задачі по проектуванню на співбесідах, з рішеннями](#Задачі-по-проектуванню-на-співбесідах-з-рішеннями)                                              | Кілька | Багато | Майже всі |
+| Опрацюйте [Задачі по об’єктно-орієнтованому проектуванню на співбесідах, з рішеннями](#Задачі-по-обєктно-орієнтованому-проектуванню-на-співбесідах-з-рішеннями) | Кілька | Багато | Майже всі |
+| Перегляньте [Додаткові задачі по проектуванню на співбесідах](#Додаткові-задачі-по-проектуванню-на-співбесідах)                                                 | Кілька | Багато | Майже всі |
 
 ## Як підходити до питань з системного проектування на співбесідах
 
@@ -218,11 +221,11 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 
 Співбесіда з системного проектування є **відкритою бесідою**.  Очікується, що ви будете її вести.
 
-Ви можете використовувати наступні кроки, щоб вести дискусію.  Щоб закріпити цей процес, опрацюйте секцію [System design interview questions with solutions](#system-design-interview-questions-with-solutions) використовуючи наступні кроки.
+Ви можете використовувати наступні кроки, щоб вести дискусію.  Щоб закріпити цей процес, опрацюйте секцію [Задачі по проектуванню на співбесідах, з рішеннями](#Задачі-по-проектуванню-на-співбесідах-з-рішеннями) використовуючи наступні кроки.
 
 ### Крок 1: Окресліть сценарії/варіанти використання, обмеження та припущення
 
-Зберіть вимоги та оцініть обсяг задачі.  Задавайте питання для вияснення сценаріїв/варіантів використання та обмежень.  Обговорюйте припущення.
+Зберіть вимоги та оцініть обсяг задачі.  Задавайте питання для вияснення сценаріїв/варіантів використання та обмежень. Обговорюйте припущення.
 
 * Хто буде це використовувати?
 * Як це будуть використовувати?
@@ -242,7 +245,7 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 
 ### Крок 3: Спроектуйте ключові компоненти
 
-Заглибтесь в деталі кожного ключового компоненту.  Наприклад, якщо вас попросили [design a url shortening service](solutions/system_design/pastebin/README.md), обговоріть:
+Заглибтесь в деталі кожного ключового компоненту. Наприклад, якщо вас попросили [спроектувати сервіс скорочення URL](solutions/system_design/pastebin/README.md), обговоріть:
 
 * Генерацію і зберігання хешу повного url
     * [MD5](solutions/system_design/pastebin/README.md) і [Base62](solutions/system_design/pastebin/README.md)
@@ -262,11 +265,11 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 * Кешування(Caching)
 * Шардинг бази даних(Database sharding)
 
-Обговорюйте потенційні рішення та компроміси.  Всі рішення є компромісами.  Вирішуйте слабкі місця, використовуючи [principles of scalable system design](#index-of-system-design-topics).
+Обговорюйте потенційні рішення та компроміси. Всі рішення є компромісами. Вирішуйте слабкі місця, використовуючи [принципи проектування масштабованої системи](#index-of-system-design-topics).
 
 ### Попередні розрахунки
 
-Вас можуть попросити здійснити деякі грубі розрахунки.  Звертайтесь [Appendix](#appendix) до наступних джерел:
+Вас можуть попросити здійснити деякі грубі розрахунки. Звертайтесь [Appendix](#appendix) до наступних джерел:
 
 * [Use back of the envelope calculations](http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)
 * [Powers of two table](#powers-of-two-table)
@@ -280,7 +283,7 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 * [The system design interview](http://www.hiredintech.com/system-design)
 * [Intro to Architecture and Systems Design Interviews](https://www.youtube.com/watch?v=ZgdS0EUmn70)
 
-## System design interview questions with solutions
+## Задачі по проектуванню на співбесідах, з рішеннями
 
 > Common system design interview questions with sample discussions, code, and diagrams.
 >
@@ -344,9 +347,9 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 
 [View exercise and solution](solutions/system_design/scaling_aws/README.md)
 
-![Imgur](http://i.imgur.com/jj3A5N8.png)
+![Imgur](images/jj3A5N8.png)
 
-## Object-oriented design interview questions with solutions
+## Задачі по об’єктно-орієнтованому проектуванню на співбесідах, з рішеннями
 
 > Common object-oriented design interview questions with sample discussions, code, and diagrams.
 >
@@ -521,7 +524,7 @@ AP є хорошим вибором, якщо ваша задача потреб
 
 #### Ведучий-ведений(Master-slave) та (ведучий-ведучий)master-master
 
-Ця тема обговорюється далі в секції [Database](#database):
+Ця тема обговорюється далі в секції [База даних](#база-даних):
 
 * [Master-slave replication](#master-slave-replication)
 * [Master-master replication](#master-master-replication)
@@ -655,7 +658,7 @@ Pull CDN`и добре працюють з високонавантаженим�
 
 * Горизонтальне масштабування вводить складність і залучає клонування серверів
     * Сервери не мають зберігати стан: вони не повинні містити будь-які дані, пов'язані з користувачами (наприклад сесії або картинки профіля)
-    * Сесії можуть зберігатись в централізованому сховищі даних, такому як [database](#database) (SQL, NoSQL) або стійкому [cache](#cache) (Redis, Memcached)
+    * Сесії можуть зберігатись в централізованому сховищі даних, такому як [база даних](#база-даних) (SQL, NoSQL) або стійкому [cache](#cache) (Redis, Memcached)
 * Сервери нижчого порядку(кеші та бази даних) повинні обробляти тим більше одночасних з'єднань чим більше масштабуються сервери вищого порядку
 
 ### Недолік(и): балансувальник навантаження
@@ -752,71 +755,71 @@ Pull CDN`и добре працюють з високонавантаженим�
 * [Introduction to Zookeeper](http://www.slideshare.net/sauravhaloi/introduction-to-apache-zookeeper)
 * [Here's what you need to know about building microservices](https://cloudncode.wordpress.com/2016/07/22/msa-getting-started/)
 
-## Database
+## База даних
 
 <p align="center">
-  <img src="http://i.imgur.com/Xkm5CXz.png">
+  <img src="images/Xkm5CXz.png">
   <br/>
-  <i><a href=https://www.youtube.com/watch?v=w95murBkYmU>Source: Scaling up to your first 10 million users</a></i>
+  <i><a href=https://www.youtube.com/watch?v=kKjm4ehYiMs>Джерело: Масштабування до перших 10 мільйонів користувачів</a></i>
 </p>
 
-### Relational database management system (RDBMS)
+### Система управління реляційними базами даних (RDBMS)
 
-A relational database like SQL is a collection of data items organized in tables.
+SQL як реляційна база даних - це дані організовані у таблиці.
 
-**ACID** is a set of properties of relational database [transactions](https://en.wikipedia.org/wiki/Database_transaction).
+**ACID** - це властивості [транзакцій](https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D0%B0%D0%BD%D0%B7%D0%B0%D0%BA%D1%86%D1%96%D1%8F_(%D0%B1%D0%B0%D0%B7%D0%B8_%D0%B4%D0%B0%D0%BD%D0%B8%D1%85)) в реляційній базі даних.
 
-* **Atomicity** - Each transaction is all or nothing
-* **Consistency** - Any transaction will bring the database from one valid state to another
-* **Isolation** - Executing transactions concurrently has the same results as if the transactions were executed serially
-* **Durability** - Once a transaction has been committed, it will remain so
+* **Атомарність (Atomicity)** - це одна з властивостей транзакцій, яка гарантує, що кожна транзакція буде виконана або не буде виконана взагалі.
+* **Узгодженість (Consistency)** - це властивість, яка гарантує, що база даних завжди буде знаходитись в правильному стані, незалежно від того, чи виконувалась транзакція, чи сталась якась помилка.
+* **Ізоляція (Isolation)** - це властивість, яка гарантує що одночасне виконання транзакцій має такі ж результати, як якщо б транзакції виконувалися послідовно.
+* **Стійкість (Durability)** - це властивість, яка гарантує, що після успішного завершення транзакції її зміни залишаться в базі даних незалежно від того, що станеться далі, включаючи аварійне завершення системи, збій жорсткого диска або відключення електропостачання.
 
-There are many techniques to scale a relational database: **master-slave replication**, **master-master replication**, **federation**, **sharding**, **denormalization**, and **SQL tuning**.
+Існує багато методів маштубування реляційної бази даних: **master-slave replication**, **master-master replication**, **federation**, **sharding**, **denormalization**, і **SQL tuning**.
 
 #### Master-slave replication
 
-The master serves reads and writes, replicating writes to one or more slaves, which serve only reads.  Slaves can also replicate to additional slaves in a tree-like fashion.  If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
+Мастер(master) виконує операції читання та запис, реплікуючи записи на один або більше слейвів(slaves), які можуть виконувати тільки операції читання. Слейви також можуть реплікувати дані на додаткові слейви у вигляді дерева. Якщо мастер вийде з ладу, система може продовжувати працювати в режимі читання, до тих пір поки слейв не буде підвищено до мастера, або не буде створено нового мастера 
 
 <p align="center">
-  <img src="http://i.imgur.com/C9ioGtn.png">
+  <img src="images/C9ioGtn.png">
   <br/>
   <i><a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/>Source: Scalability, availability, stability, patterns</a></i>
 </p>
 
-##### Disadvantage(s): master-slave replication
+##### Недоліки: master-slave replication
 
-* Additional logic is needed to promote a slave to a master.
-* See [Disadvantage(s): replication](#disadvantages-replication) for points related to **both** master-slave and master-master.
+* Для підвищення слейва до рівня мастера потрібна додаткова логіка.
+* Дивіться [Недоліки: реплікація](#Недоліки-replication), щоб ознайомитись з проблемами, пов'язаними з **обома** типами реплікації - мастер-слейв і мастер-мастер.
 
 #### Master-master replication
 
-Both masters serve reads and writes and coordinate with each other on writes.  If either master goes down, the system can continue to operate with both reads and writes.
+Обидва майстра виконують операції читання і запису і обмінюються один з одним записами. Якщо будь який мастер виходить з ладу, система може продовжувати працювати з читанням і записом.
 
 <p align="center">
-  <img src="http://i.imgur.com/krAHLGg.png">
+  <img src="images/krAHLGg.png">
   <br/>
   <i><a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/>Source: Scalability, availability, stability, patterns</a></i>
 </p>
 
-##### Disadvantage(s): master-master replication
+##### Недоліки: master-master replication
 
-* You'll need a load balancer or you'll need to make changes to your application logic to determine where to write.
-* Most master-master systems are either loosely consistent (violating ACID) or have increased write latency due to synchronization.
-* Conflict resolution comes more into play as more write nodes are added and as latency increases.
-* See [Disadvantage(s): replication](#disadvantages-replication) for points related to **both** master-slave and master-master.
+* Вам потрібен балансувальник навантаження або вам потрібно внести зміни до логіки вашого додатка, щоб визначити, куди записувати.
+* Більшість систем мастер-мастер або слабко узгоджені (порушують ACID), або мають підвищену затримку запису через синхронізацію.
+* Розв'язання конфліктів стає більш важливим зі збільшенням кількості вузлів запису та зі збільшенням затримки.
+* Дивіться [Недоліки: реплікація](#Недоліки-replication), щоб ознайомитись з проблемами, пов'язаними з **обома** типами реплікації - мастер-слейв і мастер-мастер.
 
-##### Disadvantage(s): replication
+##### Недоліки: replication
 
-* There is a potential for loss of data if the master fails before any newly written data can be replicated to other nodes.
-* Writes are replayed to the read replicas.  If there are a lot of writes, the read replicas can get bogged down with replaying writes and can't do as many reads.
-* The more read slaves, the more you have to replicate, which leads to greater replication lag.
-* On some systems, writing to the master can spawn multiple threads to write in parallel, whereas read replicas only support writing sequentially with a single thread.
-* Replication adds more hardware and additional complexity.
+* Існує потенційна загроза втрати даних, якщо майстер відмовить до того, як будь-які недавно записані дані будуть репліковані на інші вузли.
+* Записи відтворюються на читаючих репліках. Якщо є багато записів, то читаючі репліки можуть бути перенавантажені зберіганням записів і не зможуть багато читати.
+* Чим більше слейвів, тим більше потрібно реплікувати, що призводить до більшої затримки реплікації.
+* У деяких системах запис до майстра може породжувати кілька потоків для паралельного запису, тоді як читаючі репліки підтримують лише послідовний запис з одним потоком.
+* Реплікація додає більше апаратних засобів та додаткової складності.
 
-##### Source(s) and further reading: replication
+##### Джерела та додаткове читання: replication
 
-* [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
-* [Multi-master replication](https://en.wikipedia.org/wiki/Multi-master_replication)
+* [Масштабованість, доступність, стабільність, підходи](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
+* [Multi-master replication](https://uk.wikipedia.org/wiki/Multi-master_replication)
 
 #### Federation
 
@@ -1591,7 +1594,7 @@ Handy metrics based on numbers above:
 * [Designs, lessons, and advice from building large distributed systems](http://www.cs.cornell.edu/projects/ladis2009/talks/dean-keynote-ladis2009.pdf)
 * [Software Engineering Advice from Building Large-Scale Distributed Systems](https://static.googleusercontent.com/media/research.google.com/en//people/jeff/stanford-295-talk.pdf)
 
-### Additional system design interview questions
+### Додаткові задачі по проектуванню на співбесідах
 
 > Common system design interview questions, with links to resources on how to solve each.
 
@@ -1742,7 +1745,7 @@ Looking to add a blog?  To avoid duplicating work, consider adding your company 
 
 * [kilimchoi/engineering-blogs](https://github.com/kilimchoi/engineering-blogs)
 
-## Under development
+## В розробці
 
 Interested in adding a section or helping complete one in-progress?  [Contribute](#contributing)!
 
