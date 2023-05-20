@@ -134,9 +134,9 @@
   * [Система управління реляційними базами даних (RDBMS)](#Система-управління-реляційними-базами-даних-rdbms)
     * [Master-slave replication](#master-slave-replication)
     * [Master-master replication](#master-master-replication)
-    * [Federation](#federation)
-    * [Sharding](#sharding)
-    * [Denormalization](#denormalization)
+    * [Федерація](#федерація)
+    * [Шардінг](#шардінг)
+    * [Денормалізація](#денормалізація)
     * [SQL tuning](#sql-tuning)
   * [NoSQL](#nosql)
     * [Key-value store](#key-value-store)
@@ -821,72 +821,72 @@ SQL як реляційна база даних - це дані організо
 * [Масштабованість, доступність, стабільність, підходи](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
 * [Multi-master replication](https://uk.wikipedia.org/wiki/Multi-master_replication)
 
-#### Federation
+#### Федерація
 
 <p align="center">
-  <img src="http://i.imgur.com/U3qV33e.png">
+  <img src="images/U3qV33e.png">
   <br/>
-  <i><a href=https://www.youtube.com/watch?v=w95murBkYmU>Source: Scaling up to your first 10 million users</a></i>
+  <i><a href=https://www.youtube.com/watch?v=kKjm4ehYiMs>Source: Scaling up to your first 10 million users</a></i>
 </p>
 
-Federation (or functional partitioning) splits up databases by function.  For example, instead of a single, monolithic database, you could have three databases: **forums**, **users**, and **products**, resulting in less read and write traffic to each database and therefore less replication lag.  Smaller databases result in more data that can fit in memory, which in turn results in more cache hits due to improved cache locality.  With no single central master serializing writes you can write in parallel, increasing throughput.
+Федерація (або функціональний розподіл) розбиває бази даних за функціональним принципом. Наприклад, замість однієї монолітної бази даних можна мати три бази даних: **форуми**, **користувачі** та **продукти**, що призводить до меншого трафіку на кожну базу даних та, отже, меншого часу реплікації. Менші бази даних дозволяють зберігати більше даних в оперативній пам'яті, що в свою чергу призводить до більшої кількості попадань до кешу завдяки поліпшеній локальності кешування. Без одного центрального майстра, який би послідовно записував дані, можна записувати паралельно, що підвищує продуктивність.
 
-##### Disadvantage(s): federation
+##### Недоліки: федерація
 
-* Federation is not effective if your schema requires huge functions or tables.
-* You'll need to update your application logic to determine which database to read and write.
-* Joining data from two databases is more complex with a [server link](http://stackoverflow.com/questions/5145637/querying-data-by-joining-two-tables-in-two-database-on-different-servers).
-* Federation adds more hardware and additional complexity.
+* Федерація може бути корисною стратегією для масштабування бази даних, але вона може бути неефективною, якщо ваша схема вимагає великих функцій або таблиць, які не можуть бути розбиті на менші.
+* Вам потрібно буде оновити логіку свого додатку, щоб визначати, з якої бази даних читати та записувати.
+* Об'єднання даних з двох баз даних є більш складним за допомогою [зв'язку серверів](http://stackoverflow.com/questions/5145637/querying-data-by-joining-two-tables-in-two-database-on-different-servers).
+* Федерація додає більше апаратного забезпечення та додаткової складності.
 
-##### Source(s) and further reading: federation
+##### Джерела та додаткове читання: федерація
 
-* [Scaling up to your first 10 million users](https://www.youtube.com/watch?v=w95murBkYmU)
+* [Масштабування до перших 10 мільйонів користувачів](https://www.youtube.com/watch?v=w95murBkYmU)
 
-#### Sharding
+#### Шардінг
 
 <p align="center">
-  <img src="http://i.imgur.com/wU8x5Id.png">
+  <img src="images/wU8x5Id.png">
   <br/>
   <i><a href=http://www.slideshare.net/jboner/scalability-availability-stability-patterns/>Source: Scalability, availability, stability, patterns</a></i>
 </p>
 
-Sharding distributes data across different databases such that each database can only manage a subset of the data.  Taking a users database as an example, as the number of users increases, more shards are added to the cluster.
+Шардінк розподіляє дані по різних базах даних таким чином, що кожна база даних може керувати лише підмножиною даних. Наприклад, для бази даних користувачів, зі збільшенням кількості користувачів додаються додаткові шарди (частини бази даних) до кластера.
 
-Similar to the advantages of [federation](#federation), sharding results in less read and write traffic, less replication, and more cache hits.  Index size is also reduced, which generally improves performance with faster queries.  If one shard goes down, the other shards are still operational, although you'll want to add some form of replication to avoid data loss.  Like federation, there is no single central master serializing writes, allowing you to write in parallel with increased throughput.
+Подібно до переваг [федерації](#федерація), шардинг призводить до зменшення трафіку читання та запису, меншої кількості реплікації та більшої кількості звернень до кешу. Розмір індексу також зменшено, що загалом покращує продуктивність із швидшими запитами. Якщо один шард вийде з ладу, інші шарди все ще працюватимуть, хоча ви захочете додати певну форму реплікації, щоб уникнути втрати даних. Подібно до федерації, тут немає одного центрального майстра, який серіалізує записи, що дозволяє вам писати паралельно з підвищеною пропускною здатністю.
 
-Common ways to shard a table of users is either through the user's last name initial or the user's geographic location.
+Загальні способи розділення таблиці користувачів – це є перша літера прізвища користувача, або географічне розташування користувача.
 
-##### Disadvantage(s): sharding
+##### Недоліки: шардінг
 
-* You'll need to update your application logic to work with shards, which could result in complex SQL queries.
-* Data distribution can become lopsided in a shard.  For example, a set of power users on a shard could result in increased load to that shard compared to others.
-    * Rebalancing adds additional complexity.  A sharding function based on [consistent hashing](http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html) can reduce the amount of transferred data.
-* Joining data from multiple shards is more complex.
-* Sharding adds more hardware and additional complexity.
+* Вам потрібно буде оновити логіку програми для роботи з шардами, що може призвести до ускладнення запитів SQL.
+* Розподіл даних може стати нерівномірним у шарді. Наприклад, набір активних користувачів на шарді може призвести до збільшення навантаження на цей фрагмент порівняно з іншими.
+* Перебалансування додає додаткові складності. Функція шардингу на основі [консистентного хешування](http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html) може зменшити обсяг переданих даних.
+* Об’єднання даних (JOIN) із кількох шардів є складною задачею.
+* Шардинг додає більше апаратного забезпечення та приносить додаткової складності.
 
-##### Source(s) and further reading: sharding
+##### Джерела та додаткове читання: шардінг
 
-* [The coming of the shard](http://highscalability.com/blog/2009/8/6/an-unorthodox-approach-to-database-design-the-coming-of-the.html)
-* [Shard database architecture](https://en.wikipedia.org/wiki/Shard_(database_architecture))
-* [Consistent hashing](http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html)
+* [Прихід до шардингу](http://highscalability.com/blog/2009/8/6/an-unorthodox-approach-to-database-design-the-coming-of-the.html)
+* [Архітектура баз даних на основі розбиття на шарди](https://en.wikipedia.org/wiki/Shard_(database_architecture))
+* [Консистентне хешування](http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html)
 
-#### Denormalization
+#### Денормалізація
 
-Denormalization attempts to improve read performance at the expense of some write performance.  Redundant copies of the data are written in multiple tables to avoid expensive joins.  Some RDBMS such as [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) and Oracle support [materialized views](https://en.wikipedia.org/wiki/Materialized_view) which handle the work of storing redundant information and keeping redundant copies consistent.
+Денормалізація спрямована на покращення швидкодії операцій читання за рахунок зниження швидкості операцій запису. Для уникнення дорогих операцій з'єднань, зайві копії даних записуються в кілька таблиць. Деякі СУБД, такі як [PostgreSQL]((https://en.wikipedia.org/wiki/PostgreSQL)) та Oracle, підтримують матеріалізовані види, які забезпечують зберігання зайвої інформації та підтримку її консистентності між зайвими копіями.
 
-Once data becomes distributed with techniques such as [federation](#federation) and [sharding](#sharding), managing joins across data centers further increases complexity.  Denormalization might circumvent the need for such complex joins.
+Коли дані розподіляються за допомогою таких методів, як [федерація](#федерація) і [шардінг](#шардінг), об’єднання даних між різними дата-центрами ускладняється. Денормалізація може уникнути необхідності таких складних об’єднань.
 
-In most systems, reads can heavily outnumber writes 100:1 or even 1000:1.  A read resulting in a complex database join can be very expensive, spending a significant amount of time on disk operations.
+У більшості систем кількість операцій читання значно більше операцій запису (100:1 або навіть 1000:1). Операція читання в результаті складного з'єднання даних може бути дуже ресурсоємною і вимагати значного часу, потраченого на операцію з жорстким диском.
 
-##### Disadvantage(s): denormalization
+##### Недоліки: денормалізація
 
-* Data is duplicated.
-* Constraints can help redundant copies of information stay in sync, which increases complexity of the database design.
-* A denormalized database under heavy write load might perform worse than its normalized counterpart.
+* Дані дублюються.
+* Обмеження можуть допомогти забезпечити синхронізацію зайвих копій інформації, що підвищує складність проектування бази даних.
+* База даних, що має денормалізовану структуру та використовується для записів з високою навантаженістю, може працювати гірше, ніж її нормалізована аналогічна структура.
 
-###### Source(s) and further reading: denormalization
+##### Джерела та додаткове читання: денормалізація
 
-* [Denormalization](https://en.wikipedia.org/wiki/Denormalization)
+* [Денормалізація](https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%8F)
 
 #### SQL tuning
 
@@ -921,7 +921,7 @@ Benchmarking and profiling might point you to the following optimizations.
 
 ##### Avoid expensive joins
 
-* [Denormalize](#denormalization) where performance demands it.
+* [Денормалізація](#денормалізація) where performance demands it.
 
 ##### Partition tables
 
